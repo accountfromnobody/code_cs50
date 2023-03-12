@@ -1,0 +1,14 @@
+sort1 uses: bubble sort
+
+How do you know?: See the explanation for sort3.
+
+sort2 uses: merge sort
+
+How do you know?: Because the real time for sorting the random texts with sort2 is the fastest than the other sorts. The random text is the worst case scenario O.
+Bubble and Selection sort have the same value for O = O(n^2), in contrast to merge sort O = O(n log n). So sort2 must use merge sort then.
+
+sort3 uses: selection sort
+
+How do you know?: Because it took sort3 the most time to sort the already sorted text. The sorted text is the best case scenario Omega.
+The Omega of selection is n^2 which is the highest value from all other algorithms. So it must use more steps and therefore it needs more time
+than the other algorithms. We already know that sort2 is merge sort, so sort1 use bubble sort.

@@ -1,0 +1,35 @@
+* time ./sort1 reversed5000.txt
+
+real    0m0.098s
+user    0m0.055s
+sys     0m0.022s
+
+* time ./sort2 reversed5000.txt
+
+real    0m0.026s
+user    0m0.003s
+sys     0m0.015s
+
+* time ./sort3 reversed5000.txt
+
+real    0m0.059s
+user    0m0.032s
+sys     0m0.023s
+
+* time ./sort1 reversed10000.txt
+
+real    0m0.279s
+user    0m0.226s
+sys     0m0.029s
+
+* time ./sort2 reversed10000.txt
+
+real    0m0.099s
+user    0m0.011s
+sys     0m0.031s
+
+* time ./sort3 reversed10000.txt
+
+real    0m0.186s
+user    0m0.133s
+sys     0m0.032s

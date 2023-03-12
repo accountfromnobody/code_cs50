@@ -1,0 +1,53 @@
+* time ./sort1 random5000.txt
+
+real    0m0.088s
+user    0m0.051s
+sys     0m0.020s
+
+* time ./sort2 random5000.txt
+
+real    0m0.050s
+user    0m0.003s
+sys     0m0.020s
+
+* time ./sort3 random5000.txt
+
+real    0m0.050s
+user    0m0.030s
+sys     0m0.019s
+
+* time ./sort1 random10000.txt
+
+real    0m0.281s
+user    0m0.218s
+sys     0m0.035s
+
+* time ./sort2 random10000.txt
+
+real    0m0.062s
+user    0m0.009s
+sys     0m0.023s
+
+* time ./sort3 random10000.txt
+
+real    0m0.213s
+user    0m0.122s
+sys     0m0.054s
+
+* time ./sort1 random50000.txt
+
+real    0m8.291s
+user    0m7.786s
+sys     0m0.199s
+
+* time ./sort2 random50000.txt
+
+real    0m0.475s
+user    0m0.025s
+sys     0m0.171s
+
+* time ./sort3 random50000.txt
+
+real    0m3.857s
+user    0m3.318s
+sys     0m0.200s
