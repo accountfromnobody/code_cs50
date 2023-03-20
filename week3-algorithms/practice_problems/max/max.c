@@ -27,6 +27,11 @@ int main(void)
 // TODO: return the max value
 int max(int array[], int n)
 {
+    // {18, 9, 10, 5, 8, 4, 36, 31}
+    // {18, 10, 9, 5, 8, 4, 36, 31}
+    // {18, 10, 9, 8, 5, 4, 36, 31}
+
+
     for (int i = 0; i < n - 1; i++)
     {
         for (int j = 0; j < n - 1; j++)
@@ -39,5 +44,6 @@ int max(int array[], int n)
             }
         }
     }
+    return array[0];
     return array[0];
 }
