@@ -155,12 +155,12 @@ void tabulate(void)
         for (int j = 0; j < candidate_count; j++)
         {
 
-            if (candidates[j].eliminated && preferences[i][0] == j)
+            if (preferences[i][0] == j && candidates[j].eliminated)
             {
                 k++;
                 j = 0;
             }
-            else if (candidates[j].eliminated && preferences[i][1] == j)
+            else if (preferences[i][1] == j && candidates[j].eliminated)
             {
                 k++;
                 j = 0;
@@ -186,7 +186,7 @@ bool print_winner(void)
     {
 
         // If any candidate has more than half of the vote, their name should be printed
-        if (candidates[i].votes > (voter_count * 0.5) && candidates[i].eliminated == false)
+        if (candidates[i].votes > (voter_count * 0.5) && !candidates[i].eliminated)
         {
             printf("%s\n", candidates[i].name);
             return true;
@@ -205,7 +205,7 @@ int find_min(void)
     for (int i = 0; i < candidate_count - 1; i++)
     {
 
-        if (candidates[i].votes < candidates[i + 1].votes && candidates[i].eliminated == false)
+        if (candidates[i].votes < candidates[i + 1].votes && !candidates[i].eliminated)
         {
             candidate temp = candidates[i];
             candidates[i] = candidates[i + 1];
@@ -233,7 +233,7 @@ bool is_tie(int min)
     for (int i = 0; i < candidate_count; i++)
     {
 
-        if (candidates[i].votes != min && candidates[i].eliminated == false)
+        if (candidates[i].votes != min && !candidates[i].eliminated)
         {
             return false;
         }
@@ -249,7 +249,7 @@ void eliminate(int min)
     for (int i = 0; i < candidate_count; i++)
     {
 
-        if (candidates[i].votes == min && candidates[i].eliminated == false)
+        if (candidates[i].votes == min && !candidates[i].eliminated)
         {
             candidates[i].eliminated = true;
         }
