@@ -155,15 +155,9 @@ void tabulate(void)
         for (int j = 0; j < candidate_count; j++)
         {
 
-            if (preferences[i][k] == j && candidates[j].eliminated)
+            if (!candidates[preferences[i][j]].eliminated)
             {
-                k++;
-                j = 0;
-            }
-            else if (preferences[i][k] == j)
-            {
-                candidates[j].votes++;
-                k = 0;
+                candidates[preferences[i][j]].votes++;
                 break;
             }
         }
@@ -194,12 +188,12 @@ int find_min(void)
 {
     // TODO
 
-    // Sorting the candidates in descending order, so the last candidate of the array must have the minimum value
+    // Sort the candidates in descending order, so the last candidate of the array has the minimum number of votes
     int min = 0;
     for (int i = 0; i < candidate_count - 1; i++)
     {
 
-        if (candidates[i].votes < candidates[i + 1].votes && !candidates[i].eliminated)
+        if (candidates[i].votes < candidates[i + 1].votes)
         {
             candidate temp = candidates[i];
             candidates[i] = candidates[i + 1];
@@ -207,7 +201,7 @@ int find_min(void)
         }
     }
 
-    // The last candidate which is still in the race has the minimum value
+    // The last non-eliminated candidate of the array has the minimum number of votes
     for (int i = 0; i < candidate_count; i++)
     {
 
